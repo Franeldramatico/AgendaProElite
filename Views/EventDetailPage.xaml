@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    x:Class="AgendaProElite.Views.EventDetailPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:viewmodel="clr-namespace:AgendaProElite.ViewModels"
+    x:DataType="viewmodel:EventViewModel"
+    Title="Evento">
+
+    <ContentPage.BindingContext>
+        <viewmodel:EventViewModel />
+    </ContentPage.BindingContext>
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+            <Entry Text="{Binding CurrentEvent.Title}" Placeholder="Título *" />
+            
+            <Editor Text="{Binding CurrentEvent.Description}" 
+                   Placeholder="Descripción" 
+                   HeightRequest="100" />
+
+            <Grid ColumnDefinitions="*,*" ColumnSpacing="10">
+                <DatePicker Grid.Column="0" Date="{Binding CurrentEvent.StartDate}" />
+                <TimePicker Grid.Column="1" Time="{Binding CurrentEvent.StartDate.TimeOfDay}" />
+            </Grid>
+
+            <Grid ColumnDefinitions="*,*" ColumnSpacing="10">
+                <DatePicker Grid.Column="0" Date="{Binding CurrentEvent.EndDate}" />
+                <TimePicker Grid.Column="1" Time="{Binding CurrentEvent.EndDate.TimeOfDay}" />
+            </Grid>
+
+            <Picker ItemsSource="{Binding Categories}" 
+                   SelectedItem="{Binding SelectedCategory}"
+                   ItemDisplayBinding="{Binding Name}" />
+
+            <Entry Text="{Binding CurrentEvent.Location}" Placeholder="Ubicación" />
+
+            <CheckBox IsChecked="{Binding CurrentEvent.IsAllDay}" Content="Todo el día" />
+
+            <Border IsVisible="{Binding OptimalTimeSuggestion, Converter={StaticResource IsNotNullOrEmptyConverter}}"
+                   Padding="10" Margin="0,10">
+                <VerticalStackLayout>
+                    <Label Text="Sugerencia de IA:" FontAttributes="Bold" />
+                    <Label Text="{Binding OptimalTimeSuggestion}" />
+                    <Button Text="Aplicar Sugerencia" Command="{Binding ApplyOptimalTimeCommand}" />
+                </VerticalStackLayout>
+            </Border>
+
+            <Grid ColumnDefinitions="*,*" ColumnSpacing="10" Margin="0,20">
+                <Button Grid.Column="0" Text="Guardar" Command="{Binding SaveEventCommand}" />
+                <Button Grid.Column="1" Text="Eliminar" 
+                       Command="{Binding DeleteEventCommand}"
+                       IsVisible="{Binding IsNewEvent, Converter={StaticResource InvertedBoolConverter}}" />
+            </Grid>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
+

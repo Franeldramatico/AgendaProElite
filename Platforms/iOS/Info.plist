@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleDisplayName</key>
+    <string>AgendaPro Elite</string>
+    <key>CFBundleIdentifier</key>
+    <string>com.agendapro.elite</string>
+    <key>NSUserNotificationsUsageDescription</key>
+    <string>Esta app necesita acceso a notificaciones para recordarte tus eventos y tareas.</string>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>Esta app necesita acceso a tu ubicación para recordatorios basados en geolocalización.</string>
+    <key>NSLocationAlwaysUsageDescription</key>
+    <string>Esta app necesita acceso a tu ubicación para recordatorios basados en geolocalización.</string>
+    <key>NSCalendarsUsageDescription</key>
+    <string>Esta app necesita acceso a tu calendario para sincronizar eventos.</string>
+    <key>NSCalendarUsageDescription</key>
+    <string>Esta app necesita acceso a tu calendario para sincronizar eventos.</string>
+    <key>UIBackgroundModes</key>
+    <array>
+        <string>location</string>
+        <string>processing</string>
+        <string>remote-notification</string>
+    </array>
+</dict>
+</plist>
+

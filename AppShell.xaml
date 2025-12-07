@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="AgendaProElite.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:AgendaProElite.Views"
+    Title="AgendaPro Elite"
+    Shell.FlyoutBehavior="Flyout">
+
+    <ShellContent
+        Title="Calendario"
+        ContentTemplate="{DataTemplate local:CalendarPage}"
+        Route="CalendarPage" />
+
+    <ShellContent
+        Title="Tareas"
+        ContentTemplate="{DataTemplate local:TaskPage}"
+        Route="TaskPage" />
+
+    <ShellContent
+        Title="Configuración"
+        ContentTemplate="{DataTemplate local:SettingsPage}"
+        Route="SettingsPage" />
+
+</Shell>
+

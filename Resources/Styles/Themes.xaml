@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <!-- Default Theme -->
+    <ResourceDictionary x:Key="DefaultTheme">
+        <Color x:Key="ThemePrimary">#512BD4</Color>
+        <Color x:Key="ThemeBackground">#FFFFFF</Color>
+        <Color x:Key="ThemeSurface">#F5F5F5</Color>
+    </ResourceDictionary>
+
+    <!-- Ocean Theme -->
+    <ResourceDictionary x:Key="OceanTheme">
+        <Color x:Key="ThemePrimary">#0066CC</Color>
+        <Color x:Key="ThemeBackground">#E3F2FD</Color>
+        <Color x:Key="ThemeSurface">#BBDEFB</Color>
+    </ResourceDictionary>
+
+    <!-- Forest Theme -->
+    <ResourceDictionary x:Key="ForestTheme">
+        <Color x:Key="ThemePrimary">#2E7D32</Color>
+        <Color x:Key="ThemeBackground">#E8F5E9</Color>
+        <Color x:Key="ThemeSurface">#C8E6C9</Color>
+    </ResourceDictionary>
+
+    <!-- Sunset Theme -->
+    <ResourceDictionary x:Key="SunsetTheme">
+        <Color x:Key="ThemePrimary">#FF6B35</Color>
+        <Color x:Key="ThemeBackground">#FFF3E0</Color>
+        <Color x:Key="ThemeSurface">#FFE0B2</Color>
+    </ResourceDictionary>
+
+    <!-- Midnight Theme -->
+    <ResourceDictionary x:Key="MidnightTheme">
+        <Color x:Key="ThemePrimary">#1A237E</Color>
+        <Color x:Key="ThemeBackground">#E8EAF6</Color>
+        <Color x:Key="ThemeSurface">#C5CAE9</Color>
+    </ResourceDictionary>
+
+    <!-- Add 45+ more themes here in production -->
+
+</ResourceDictionary>
+

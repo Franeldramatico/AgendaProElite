@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    x:Class="AgendaProElite.Views.SettingsPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:viewmodel="clr-namespace:AgendaProElite.ViewModels"
+    x:DataType="viewmodel:SettingsViewModel"
+    Title="Configuración">
+
+    <ContentPage.BindingContext>
+        <viewmodel:SettingsViewModel />
+    </ContentPage.BindingContext>
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+            <Label Text="Apariencia" FontSize="18" FontAttributes="Bold" />
+            
+            <Label Text="Tema" />
+            <Picker ItemsSource="{Binding Themes}" SelectedItem="{Binding CurrentTheme}" />
+
+            <CheckBox IsChecked="{Binding IsDarkMode}" Content="Modo Oscuro" />
+            <CheckBox IsChecked="{Binding AutoDarkMode}" Content="Modo Oscuro Automático" />
+
+            <Label Text="Sincronización" FontSize="18" FontAttributes="Bold" Margin="0,20,0,0" />
+            
+            <Button Text="Sincronizar Google Calendar" 
+                  Command="{Binding SyncGoogleCommand}"
+                  IsEnabled="{Binding IsGoogleSynced, Converter={StaticResource InvertedBoolConverter}}" />
+            
+            <Button Text="Sincronizar Outlook Calendar" 
+                  Command="{Binding SyncOutlookCommand}"
+                  IsEnabled="{Binding IsOutlookSynced, Converter={StaticResource InvertedBoolConverter}}" />
+
+            <Label Text="Exportar" FontSize="18" FontAttributes="Bold" Margin="0,20,0,0" />
+            
+            <Button Text="Exportar a PDF" />
+            <Button Text="Exportar a Excel" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
+

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <!-- Primary Colors -->
+    <Color x:Key="Primary">#512BD4</Color>
+    <Color x:Key="PrimaryDark">#3A1FA0</Color>
+    <Color x:Key="PrimaryLight">#7B5FE8</Color>
+
+    <!-- Secondary Colors -->
+    <Color x:Key="Secondary">#DFD8F7</Color>
+    <Color x:Key="Tertiary">#FF6D35</Color>
+    <Color x:Key="TertiaryLight">#FF8D65</Color>
+
+    <!-- Neutral Colors -->
+    <Color x:Key="White">#FFFFFF</Color>
+    <Color x:Key="Black">#000000</Color>
+    <Color x:Key="Gray100">#F5F5F5</Color>
+    <Color x:Key="Gray200">#EEEEEE</Color>
+    <Color x:Key="Gray300">#E0E0E0</Color>
+    <Color x:Key="Gray400">#BDBDBD</Color>
+    <Color x:Key="Gray500">#9E9E9E</Color>
+    <Color x:Key="Gray600">#757575</Color>
+    <Color x:Key="Gray900">#212121</Color>
+
+    <!-- Semantic Colors -->
+    <Color x:Key="Success">#4CAF50</Color>
+    <Color x:Key="Error">#F44336</Color>
+    <Color x:Key="Warning">#FF9800</Color>
+    <Color x:Key="Info">#2196F3</Color>
+
+    <!-- Category Colors -->
+    <Color x:Key="CategoryPersonal">#FF6B6B</Color>
+    <Color x:Key="CategoryWork">#4ECDC4</Color>
+    <Color x:Key="CategoryFamily">#45B7D1</Color>
+    <Color x:Key="CategoryHealth">#96CEB4</Color>
+    <Color x:Key="CategoryEducation">#FFEAA7</Color>
+
+</ResourceDictionary>
+
